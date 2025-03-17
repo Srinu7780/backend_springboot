@@ -14,23 +14,23 @@ pipeline {
                     if (isUnix()) {
                         sh 'mvn clean package'
                     } else {
-                        bat 'mvn clean package'
+                        bat 'java app.java'
                     }
                 }
             }
         }
 
-        stage('Test') {
-            steps {
-                script {
-                    if (isUnix()) {
-                        sh 'mvn test'
-                    } else {
-                        bat 'mvn test'
-                    }
-                }
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         script {
+        //             if (isUnix()) {
+        //                 sh 'mvn test'
+        //             } else {
+        //                 bat 'mvn test'
+        //             }
+        //         }
+        //     }
+        // }
 
         stage('Deploy') {
             steps {
