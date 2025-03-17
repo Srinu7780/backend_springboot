@@ -14,7 +14,7 @@ pipeline {
                     if (isUnix()) {
                         sh 'mvn clean package'
                     } else {
-                        bat 'java app.java'
+                        bat 'java demo/app.java'
                     }
                 }
             }
