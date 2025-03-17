@@ -1,12 +1,12 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/Srinu7780/backend_springboot.git'
-            }
-        }
+    // stages {
+    //     stage('Clone Repository') {
+    //         steps {
+    //             git 'https://github.com/Srinu7780/backend_springboot.git'
+    //         }
+    //     }
 
         // stage('Build') {
         //     steps {
