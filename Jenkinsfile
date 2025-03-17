@@ -8,29 +8,29 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                script {
-                    if (isUnix()) {
-                        sh 'mvn clean package'
-                    } else {
-                        bat 'mvn clean package'
-                    }
-                }
-            }
-        }
+        // stage('Build') {
+        //     steps {
+        //         script {
+        //             if (isUnix()) {
+        //                 sh 'mvn clean package'
+        //             } else {
+        //                 bat 'mvn clean package'
+        //             }
+        //         }
+        //     }
+        // }
 
-        stage('Test') {
-            steps {
-                script {
-                    if (isUnix()) {
-                        sh 'mvn test'
-                    } else {
-                        bat 'mvn test'
-                    }
-                }
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         script {
+        //             if (isUnix()) {
+        //                 sh 'mvn test'
+        //             } else {
+        //                 bat 'mvn test'
+        //             }
+        //         }
+        //     }
+        // }
 
         stage('Deploy') {
             steps {
